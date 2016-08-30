@@ -24,41 +24,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Libertad 1617</td>
-                            <td>Retiro, Buenos Aires</td>
-                            <td>Abierto</td>
-                            <td>Hotel</td>
-                            <td class="center">
-                                <a href="#" class="btn btn-primary btn-circle"><i class="fa fa-pencil-square-o"></i></a>
-                                <a href="#" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Bulnes 1905</td>
-                            <td>Palermo, Buenos Aires</td>
-                            <td>Refaccionando</td>
-                            <td>Casa particular</td>
-                            <td class="center">
-                                <a href="#" class="btn btn-primary btn-circle"><i class="fa fa-pencil-square-o"></i></a>
-                                <a href="#" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Avenida Martinez de Hoz 2071</td>
-                            <td>Mar del Plata</td>
-                            <td>Abierto</td>
-                            <td>Casa</td>
-                            <td class="center">
-                                <a href="#" class="btn btn-primary btn-circle"><i class="fa fa-pencil-square-o"></i></a>
-                                <a href="#" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Avenida Belgrano 1041</td>
-                            <td>Mendoza</td>
-                            <td>Abierto</td>
-                            <td>Hotel</td>
+                        <tr ng-repeat="propiedad in listadoCtrl.propiedades">
+                            <td>{{ propiedad.direccion }}</td>
+                            <td>{{ propiedad.localidad }}</td>
+                            <td>{{ propiedad.estado }}</td>
+                            <td>{{ propiedad.tipo }}</td>
                             <td class="center">
                                 <a href="#" class="btn btn-primary btn-circle"><i class="fa fa-pencil-square-o"></i></a>
                                 <a href="#" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></a>
