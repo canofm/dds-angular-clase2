@@ -10,7 +10,7 @@ angular.module('booking-app', ['ngCookies', 'ngResource', 'ngSanitize', 'ui.rout
   .state('main', {
     abstract: true,
     views: {
-      '': {
+      'layout': {
         templateUrl: "app/layout/layout.html"
       },
       'container@main': {
