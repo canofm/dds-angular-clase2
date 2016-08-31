@@ -3,14 +3,20 @@ function Propiedad (id, direccion, localidad, estado, tipo) {
 }
 
 function PropiedadesServices() {
-	self = this;
-	self.getAll = function () {
-		return [
-			new Propiedad(1, "Libertad 1617", "Retiro, Buenos Aires", "Abierto", "Hotel"),
-			new Propiedad(2, "Bulnes 1905", "Palermo, Buenos Aires", "Refaccionando", "Casa particular"),
-			new Propiedad(3, "Avenida Martinez de Hoz 2071", "Punta Mogotes, Mar del Plata", "Abierto", "Casa particular"),
-			new Propiedad(4, "Avenida Belgrano 1041", "Mendoza", "Abierto", "Hotel")
+	var self = this;
+	propiedades = [
+			new Propiedad(1, "Libertad 1617", "Retiro, Buenos Aires", "Abierto", { nombre: "Hotel", cantidadEstrellas: 3 } ),
+			new Propiedad(2, "Bulnes 1905", "Palermo, Buenos Aires", "Refaccionando", { nombre: "Casa particular", banios: 2, antiguedad: 15 }),
+			new Propiedad(3, "Avenida Martinez de Hoz 2071", "Punta Mogotes, Mar del Plata", "Abierto", { nombre: "Casa particular", banios: 1, antiguedad: 0 }),
+			new Propiedad(4, "Avenida Belgrano 1041", "Mendoza", "Abierto", { nombre: "Hotel", cantidadEstrellas: 2 })
 		];
+
+	self.getAll = function () {
+		return propiedades;
+	};
+	
+	self.create = function (propiedad) {
+		propiedades.push(propiedad);
 	};
 };
 
