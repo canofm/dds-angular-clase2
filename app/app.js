@@ -5,6 +5,7 @@ angular.module('booking-app', ['ngCookies', 'ngResource', 'ngSanitize', 'ui.rout
   $urlRouterProvider.otherwise('/');
   return $locationProvider.html5Mode(true);
 })
+.constant('_', window._)
 .config(function($stateProvider) {
   return $stateProvider
   .state('main', {
