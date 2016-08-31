@@ -9,6 +9,6 @@ function EditarPropiedadCtrl(PropiedadesServices, propiedad) {
 };
 
 angular.module("booking-app")
-.controller("EditarPropiedadCtrl", [ "PropiedadesServices", "propiedad", function(PropiedadesServices, propiedad) {
-	return new EditarPropiedadCtrl(PropiedadesServices, propiedad);
-}]);
+.controller("EditarPropiedadCtrl", EditarPropiedadCtrl);
+
+EditarPropiedadCtrl.$inject = [ "PropiedadesServices", "propiedad" ];

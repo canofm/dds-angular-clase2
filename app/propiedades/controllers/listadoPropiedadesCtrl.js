@@ -8,6 +8,6 @@ function ListadoPropiedadesCtrl(propiedades, PropiedadesServices) {
 }
 
 angular.module("booking-app")
-.controller("ListadoPropiedadesCtrl", [ "propiedades", "PropiedadesServices", function(propiedades, PropiedadesServices) { 
-  return new ListadoPropiedadesCtrl(propiedades, PropiedadesServices);
-}]);
+.controller("ListadoPropiedadesCtrl", ListadoPropiedadesCtrl);
+
+ListadoPropiedadesCtrl.$inject = [ "propiedades", "PropiedadesServices" ];
