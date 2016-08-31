@@ -17,5 +17,16 @@ angular.module('booking-app')
     templateUrl: "app/propiedades/views/create.html",
     controller: "CrearPropiedadCtrl",
     controllerAs: "crearCtrl"
+  })
+  .state('main.editar_propiedades', {
+    url: "/propiedades/editar/:id",
+    templateUrl: "app/propiedades/views/edit.html",
+    controller: "EditarPropiedadCtrl",
+    controllerAs: "editarCtrl",
+    resolve: {
+      propiedad: function (PropiedadesServices, $stateParams) {
+        return PropiedadesServices.get(parseInt($stateParams.id));
+      }
+    }
   });
 });
