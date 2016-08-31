@@ -37,7 +37,7 @@
                                 <select class="form-control" ng-click="formCtrl.abrirTipoPropiedad()" ng-options="tipo as tipo.nombre for tipo in formCtrl.tiposDePropiedad track by tipo.nombre" ng-model="formCtrl.propiedad.tipo"></select>
                             </div>
                             <div ui-view="tipo-propiedad"></div>
-                            <button type="submit" class="btn btn-outline btn-primary" ng-click="formCtrl.crear()">Guardar</button>
+                            <button type="submit" class="btn btn-outline btn-primary" ng-click="formCtrl.guardar()">Guardar</button>
                             <button type="reset" class="btn btn-outline btn-danger">Reset</button>
                             <button ui-sref="main.listado_propiedades" class="btn btn-outline btn-warning">Volver</button>
                         </form>
