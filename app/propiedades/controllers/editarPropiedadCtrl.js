@@ -1,14 +1,14 @@
-function EditarPropiedadCtrl(PropiedadesServices, propiedad) {
+function EditarPropiedadCtrl(PropiedadesHome, propiedad) {
   var self = this;
   self.propiedad = propiedad;
   self.tiposDePropiedad = [{ nombre: "Hotel" }, { nombre: "Particular"}]
 
   self.editar = function () {
-  	PropiedadesServices.update(self.propiedad);
+  	PropiedadesHome.update(self.propiedad);
   }
 };
 
 angular.module("booking-app")
 .controller("EditarPropiedadCtrl", EditarPropiedadCtrl);
 
-EditarPropiedadCtrl.$inject = [ "PropiedadesServices", "propiedad" ];
+EditarPropiedadCtrl.$inject = [ "PropiedadesHome", "propiedad" ];

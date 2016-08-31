@@ -11,7 +11,7 @@ propiedades = [
 	new Propiedad("Avenida Belgrano 1041", "Mendoza", "Abierto", { nombre: "Hotel", cantidadEstrellas: 2 })
 ];
 
-function PropiedadesServices() {
+function PropiedadesHome() {
 	var self = this;
 
 	self.getAll = function () {
@@ -36,6 +36,6 @@ function PropiedadesServices() {
 };
 
 angular.module("booking-app")
-.factory("PropiedadesServices", function() {
-	return new PropiedadesServices();
+.factory("PropiedadesHome", function() {
+	return new PropiedadesHome();
 });

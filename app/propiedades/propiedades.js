@@ -7,8 +7,8 @@ angular.module('booking-app')
     controller: "ListadoPropiedadesCtrl",
     controllerAs: "listadoCtrl",
     resolve: {
-    	propiedades: function (PropiedadesServices) {
-    		return PropiedadesServices.getAll()
+    	propiedades: function (PropiedadesHome) {
+    		return PropiedadesHome.getAll()
     	}
     }
   })
@@ -24,8 +24,8 @@ angular.module('booking-app')
     controller: "EditarPropiedadCtrl",
     controllerAs: "editarCtrl",
     resolve: {
-      propiedad: function (PropiedadesServices, $stateParams) {
-        return PropiedadesServices.get(parseInt($stateParams.id));
+      propiedad: function (PropiedadesHome, $stateParams) {
+        return PropiedadesHome.get(parseInt($stateParams.id));
       }
     }
   });

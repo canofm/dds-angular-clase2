@@ -1,14 +1,14 @@
-function CrearPropiedadCtrl(PropiedadesServices) {
+function CrearPropiedadCtrl(PropiedadesHome) {
   var self = this;
   self.propiedad = {};
   self.tiposDePropiedad = [{ nombre: "Hotel" }, { nombre: "Particular"}]
 
   self.crear = function () {
-  	PropiedadesServices.create(self.propiedad);
+  	PropiedadesHome.create(self.propiedad);
   }
 };
 
 angular.module("booking-app")
 .controller("CrearPropiedadCtrl", CrearPropiedadCtrl);
 
-CrearPropiedadCtrl.$inject = [ "PropiedadesServices" ];
+CrearPropiedadCtrl.$inject = [ "PropiedadesHome" ];
