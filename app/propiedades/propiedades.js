@@ -14,6 +14,8 @@ angular.module('booking-app')
   })
   .state('main.alta_propiedades', {
     url: "/propiedades/crear",
-    templateUrl: "app/propiedades/views/create.html"
+    templateUrl: "app/propiedades/views/create.html",
+    controller: "CrearPropiedadCtrl",
+    controllerAs: "crearCtrl"
   });
 });
