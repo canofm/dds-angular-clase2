@@ -1,13 +1,13 @@
-function ListadoPropiedadesCtrl(propiedades) {
+function ListadoPropiedadesCtrl(propiedades, PropiedadesServices) {
   var self = this;
   self.propiedades = propiedades;
 
   self.delete = function (propiedadId) {
-		self.propiedades = _.reject(self.propiedades, function(obj) { return _.isMatch(obj, {id: propiedadId}); });
+  	PropiedadesServices.delete(propiedadId)
 	};
 }
 
 angular.module("booking-app")
-.controller("ListadoPropiedadesCtrl", [ "propiedades", function(propiedades) { 
-  return new ListadoPropiedadesCtrl(propiedades);
+.controller("ListadoPropiedadesCtrl", [ "propiedades", "PropiedadesServices", function(propiedades, PropiedadesServices) { 
+  return new ListadoPropiedadesCtrl(propiedades, PropiedadesServices);
 }]);
