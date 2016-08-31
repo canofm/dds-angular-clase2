@@ -12,18 +12,20 @@
 
     self.Detalle = Detalle;
 
-    self.detalleVentas = new Detalle(3, 'Nuevas ventas!');
+    self.detalleVentas = new Detalle(3, 'Nuevas ventas!', "shopping-cart", "yellow");
 
-    self.detalleMensajes = new Detalle(10, 'Nuevas mensajes!');
+    self.detalleMensajes = new Detalle(10, 'Nuevas mensajes!', "comments", "primary");
 
-    self.detalleQuejas = new Detalle(3, 'Nuevas quejas!');
+    self.detalleQuejas = new Detalle(3, 'Nuevas quejas!', "support", "red");
 
-    self.detalleCampanias = new Detalle(5, 'Nuevas campañas!');
+    self.detalleCampanias = new Detalle(5, 'Nuevas campañas!', "tasks", "green");
 
-    function Detalle(_cantidad, _mensaje) {
+    function Detalle(_cantidad, _mensaje, icon, color) {
       return {
         cantidad: _cantidad,
-        mensaje: _mensaje
+        mensaje: _mensaje,
+        icon: icon,
+        color: color
       };
     }
   }
